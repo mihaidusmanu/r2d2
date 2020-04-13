@@ -160,7 +160,7 @@ def extract_keypoints(args):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser("Extract keypoints for a given image")
-    parser.add_argument("--model", type=str, required=True, help='model path')
+    parser.add_argument("--model", type=str, default='models/r2d2_WASF_N16.pt', help='model path')
     
     parser.add_argument("--images", type=str, required=True, nargs='+', help='images / list')
     parser.add_argument("--tag", type=str, default='r2d2', help='output file tag')
@@ -169,7 +169,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--scale-f", type=float, default=2**0.25)
     parser.add_argument("--min-size", type=int, default=256)
-    parser.add_argument("--max-size", type=int, default=1024)
+    parser.add_argument("--max-size", type=int, default=1600)
     parser.add_argument("--min-scale", type=float, default=0)
     parser.add_argument("--max-scale", type=float, default=1)
     
